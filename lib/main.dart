@@ -2,5 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:throw_dice/gradient_container.dart';
 
 void main() {
-  runApp(const MaterialApp(home: Scaffold(body: GradientContainer())));
+  runApp(
+    MaterialApp(
+      home: Scaffold(body: GradientContainer.purple()),
+    ),
+  );
 }
