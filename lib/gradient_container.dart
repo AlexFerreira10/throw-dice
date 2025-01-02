@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:throw_dice/dice_roller.dart';
 
 class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key, required this.colors});
@@ -14,14 +15,13 @@ class GradientContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.bottomCenter,
-          end: Alignment.topCenter,
-          colors: colors,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.bottomCenter,
+            end: Alignment.topCenter,
+            colors: colors,
+          ),
         ),
-      ),
-      child: Center(child: Image.asset('assets/images/dice-2.png', width: 200)),
-    );
+        child: Center(child: DiceRoller()));
   }
 }
